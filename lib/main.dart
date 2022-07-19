@@ -1,67 +1,65 @@
 import 'package:flutter/material.dart';
+import 'dart:math' as math;
 
-void main() => runApp(MyApp()); /*1*/
+void main() {
+  runApp(const MyApp());
+}
 
 class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Throw The Dice',
-      home: Scaffold(/*5*/
-        appBar: AppBar(/*6*/
-          title: Text('Throw The Dice'),
-          backgroundColor: Colors.red,
-        ),
-        body: Center(/*7*/
-          child: ChangeForm(),
-        ),
+      title: 'Flutter Demo',
+      theme: ThemeData(
+        primarySwatch: Colors.blue,
       ),
+      home: const MyHomePage(title: 'Roll The DIce'),
     );
   }
 }
 
-class ChangeForm extends StatefulWidget {
-  @override
-  _ChangeFormState createState() => _ChangeFormState();
-}
+class MyHomePage extends StatefulWidget {
+  const MyHomePage({Key? key, required this.title}) : super(key: key);
+  final String title;
 
-class _ChangeFormState extends State<ChangeForm> {
-  int _count = 3;
-  void _handlePressed() {
+  @override
+  State<MyHomePage> createState() => _MyHomePageState();
+}
+class _MyHomePageState extends State<MyHomePage> {
+  var dice = ['1','2','3','4','5','6'];
+  var random = math.Random();
+  var result;
+
+  void _shuffle() {
     setState(() {
-      var list = [1, 2, 3, 4, 5, 6];
-      for(var $_count in list);
-      // _count++;
+      result = dice[random.nextInt(6)];
     });
   }
 
-
+  @override
   Widget build(BuildContext context) {
-    return Container(
-        padding: const EdgeInsets.all(50.0),
+    return Scaffold(
+      appBar: AppBar(
+        title: Text(widget.title),
+      ),
+
+      body: Center(
         child: Column(
+          mainAxisSize: MainAxisSize.min,
           children: <Widget>[
-            Text(
-              "$_count",
-              style: TextStyle(
-                  color:Colors.black,
-                  fontSize: 30.0,
-                  fontWeight: FontWeight.w500
-              ),
+            Text("Push!"),
+            FloatingActionButton(
+              onPressed: _shuffle,
+              child: Icon(Icons.shuffle),
             ),
-            FlatButton(
-              onPressed: _handlePressed,
-              color: Colors.red,
-              child: Text(
-                'PUSH!',
-                style: TextStyle(
-                    color:Colors.white,
-                    fontSize: 20.0
-                ),
-              ),
-            )
+            Text(
+                '$result'
+            ),
           ],
-        )
+        ),
+      ),
     );
   }
 }
