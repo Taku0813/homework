@@ -32,7 +32,7 @@ class _MyHomePageState extends State<MyHomePage> {
   var random = math.Random();
   var result;
 
-  void _shuffle() {
+  void _dice() {
     setState(() {
       result = dice[random.nextInt(6)];
     });
@@ -49,17 +49,23 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: <Widget>[
-            Text('Youa number is ... $result!!!',
+            Text('Your number is ... $result!!!',
               style: TextStyle(
                 fontSize: 30.0,
                 color: Colors.red
               ),
             ),
-            FloatingActionButton(
-              onPressed: _shuffle,
-              child: Icon(Icons.shuffle),
-            ),
-            Text("Push!",style: TextStyle(fontSize: 40.0),),
+        OutlineButton(
+          onPressed: _dice,
+          borderSide: BorderSide(color: Colors.red),
+          color: Colors.red,
+          child: const Text(
+            'Dice!',
+            style: TextStyle(
+                color:Colors.red,
+                fontSize: 40.0
+            ),),
+           ),
           ],
         ),
       ),
