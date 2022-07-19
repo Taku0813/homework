@@ -49,14 +49,17 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: <Widget>[
-            Text("Push!"),
+            Text('Youa number is ... $result!!!',
+              style: TextStyle(
+                fontSize: 30.0,
+                color: Colors.red
+              ),
+            ),
             FloatingActionButton(
               onPressed: _shuffle,
               child: Icon(Icons.shuffle),
             ),
-            Text(
-                '$result'
-            ),
+            Text("Push!",style: TextStyle(fontSize: 40.0),),
           ],
         ),
       ),
