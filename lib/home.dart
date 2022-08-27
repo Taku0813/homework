@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:homework/home2.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
@@ -9,8 +10,17 @@ class HomeScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text('ホーム'),
       ),
-      body:
-      const Center(child: Text('ホーム画面', style: TextStyle(fontSize: 32.0))),
+      body: Center(
+        child: RaisedButton(
+          child: Text('Next'),
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => Home2()),
+            );
+          },
+        ),
+      ),
     );
   }
 }
