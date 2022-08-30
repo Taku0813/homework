@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>280172001247-osb6ls7bppjjhlqtlrc2gmm5if1qjcp8.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.280172001247-osb6ls7bppjjhlqtlrc2gmm5if1qjcp8</string>
+	<key>API_KEY</key>
+	<string>AIzaSyAdpFjNL6Eqfpeq1YLVGze3Czdk0mFHuzI</string>
+	<key>GCM_SENDER_ID</key>
+	<string>280172001247</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.example.homework</string>
+	<key>PROJECT_ID</key>
+	<string>truck-management-44eaf</string>
+	<key>STORAGE_BUCKET</key>
+	<string>truck-management-44eaf.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:280172001247:ios:875dd48cca34bbfa65766a</string>
+</dict>
+</plist>
