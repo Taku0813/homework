@@ -16,9 +16,9 @@ Future<void> main() async {
   var db = FirebaseFirestore.instance;
   // Create a new user with a first and last name
   final user = <String, dynamic>{
-    "first": "Ada",
-    "last": "Lovelace",
-    "born": 1815
+    "first": "Teruaki",
+    "last": "Sato",
+    "born": 2001
   };
 
 // Add a new document with a generated ID
@@ -26,6 +26,8 @@ Future<void> main() async {
       print('DocumentSnapshot added with ID: ${doc.id}'));
   await db.collection("users") .add(user) .then ((DocumentReference doc) =>
   print('DocumentSnapshot added with ID: ${doc.id}'));
+
+
 
   runApp(const MyApp());
 }
